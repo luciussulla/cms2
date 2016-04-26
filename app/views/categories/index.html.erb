@@ -1,0 +1,46 @@
+<section id="title-bar">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+           <h1>Categories index </h1>
+         </div>
+       </div>
+     </div>
+</section>
+
+   <section id="categories">
+      <div class="container">
+        <div class="row">
+         <div class="col-md-8">
+              <ul>
+                <table>
+                    <tr>
+                        <th>Category Name &nbsp; &nbsp; &nbsp;</th>
+                        <th>&nbsp; &nbsp; &nbsp;</th>
+                        <th>&nbsp; &nbsp; &nbsp;</th>
+                    </tr>    
+                     <% @categories.each do |category| %>
+                         <tr>
+                             <td><%=link_to "Show #{category.name}", category_path(category), class: "btn btn-default" %></li></td>
+                             <td><li><%= link_to 'edit category', edit_category_path(category), class: "btn btn-info" %></li></td> 
+                             <td><li><%= link_to 'destroy', category_path(category), method: :delete, class: "btn btn-danger" %></li></td>
+                         </tr>
+                    <%end%> 
+                </table>
+               </ul>
+               <%= link_to 'new category', new_category_path, class: "btn btn-warning" %>
+         </div>
+        <div class="col-md-4">
+            <%= image_tag("demo1.jpg", {class: "demo"}) %> 
+            <h2>Dandy Warhols</h2>
+            <p>Lorem Ipsum jest tekstem stosowanym
+            jako przykładowy wypełniacz w przemyśle poligraficznym. 
+            po raz pierwszy użyty w XV w. przez nieznanego</p>
+            <a href="#" class="btn btn-default">Read More</a>
+        </div>
+        
+        </div><!-- row --> 
+      </div> <!-- container-->
+    </section>   
+
+        

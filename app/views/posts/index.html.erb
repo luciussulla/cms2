@@ -1,0 +1,42 @@
+   <section id="title-bar">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-12">
+           <h1>All posts of the category: <%=@category.name %></h1>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <section id="posts">
+      <div class="container">
+        <div class="row">
+         <div class="col-md-8">
+
+            <% @category.posts.each do |post| %> 
+            <div class="post-image">
+                <%= link_to post.title + ' ' + post.status, category_post_path(@category, post) %> <br/>
+                <%= post.body %> <br/>
+                <%= image_tag post.photo_url.to_s %> 
+            </div>
+            <br/>
+            <% end %> 
+        </div>
+       
+        <div class="col-md-4">
+            <%= image_tag("demo1.jpg", {class: "demo"}) %> 
+            <h2>Dandy Warhols</h2>
+            <p>Lorem Ipsum jest tekstem stosowanym
+            jako przykładowy wypełniacz w przemyśle poligraficznym. 
+            po raz pierwszy użyty w XV w. przez nieznanego</p>
+            <a href="#" class="btn btn-default">Read More</a>
+        </div>
+        
+        </div><!-- row --> 
+      </div> <!-- container-->
+    </section>    
+    
+
+
+
+

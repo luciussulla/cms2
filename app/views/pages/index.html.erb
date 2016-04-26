@@ -1,0 +1,22 @@
+<h1>Homepage yay it works! </h1>
+
+
+<% @posts.each do |post| %> 
+    <div class="panel panel-success"> 
+    
+        <div class="panel-heading">
+            <%= post.title %>
+        </div> 
+        
+        <div class="panel-body">
+            <%= post.body %><br/><br/>
+            <%= post.category.name %>
+        </div>
+        
+        <div class="panel-footer">
+            <%= post.status %> 
+            <%= post.created_at %> 
+        </div>
+            
+    </div>
+<% end %> 

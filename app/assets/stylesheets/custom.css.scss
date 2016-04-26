@@ -1,0 +1,163 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$gray-light: #777; 
+$gray-darker: #222; 
+$gray-medium-light: #eaeaea;
+$white: #fff; 
+
+
+/* universal */
+
+body {
+  padding-top: 45px;
+}
+
+
+textarea {
+  resize: vertical;
+}
+
+
+/*
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+@include box_sizing;
+}
+*/
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  
+}
+
+input {
+  height: auto !important;
+}
+
+/* miscellaneous */
+/*
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+*/
+
+/* my styles for new bootstrap template */
+
+.em-text {
+  color:#1caa98 !important;
+}
+
+section{
+  padding: 40px 0 40px 0;
+}
+
+.jumbotron {
+  background: url(notes.jpg) no-repeat top center; 
+  color: white;
+  height: 400px;
+  overflow: none;
+}
+
+.jumbotron .pee {
+  text-align: center;
+}
+.jumbotron p {
+  background: #1caa98;
+  display: inline;
+  
+}
+
+.jumbotron img.app-btn {
+  width: 40%;
+  margin-right: 30px;
+}
+
+.header p, .header h1 {
+  text-align: center;
+}
+
+.demo {
+  width: 100%;
+  padding:3px;
+  border: 1px solid #ccc;
+}
+
+section#feature {
+  background: #1caa98; 
+  overflow: auto;
+  padding: 40px;
+  color: #fff;
+}
+
+
+section#feature ul li {
+  font-size: 22px;
+  list-style: none;
+  line-height: 2.0em;
+}
+
+section#title-bar {
+  padding: 0;
+  margin: 0;
+  height:80px;
+  background: #1caa98;
+  color:white;
+}
+
+section#title-bar h1 {
+  margin-bottom:20px;
+}
+
+footer {
+  background:#333;
+  color:#fff;
+  padding: 30px 0 20px 0;
+}
+
+footer li {
+  float:left;
+  padding: 0 10px 0 10px;
+  list-style: none;
+}
+
+footer a {
+  color:#fff;
+}
+
+footer p {
+  float: right;
+}
+
+/* categories index page styles */
+
+section#categories ul {
+  list-style: none;
+  padding:0;
+  display: inline; 
+}
+section#categories ul li {
+  display: inline; 
+}
+section#categories tr td {
+
+  padding: 10px 10px 10px 0px;
+}
+
+/* post of given category with images and description */ 
+section .post-image {
+  overflow: auto;
+  font-size: 16px;
+}
