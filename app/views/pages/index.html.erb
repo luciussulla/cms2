@@ -1,22 +1,89 @@
-<h1>Homepage yay it works! </h1>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          
+        <a class="navbar-brand em-text" href="index.html">Blog</a> 
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+             <li class="active"><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Help",    "#" %></li>
+              <li><%= link_to "Log in",  "#" %> </li>
+              <li><%= link_to "About", "/about" %> </li>
+              <li ><%= link_to "Contact", "/contact"%> </li>
+          </ul>
+        </div><!--nav-collapse -->
+      </div>
+    </nav>
 
 
-<% @posts.each do |post| %> 
-    <div class="panel panel-success"> 
-    
-        <div class="panel-heading">
-            <%= post.title %>
-        </div> 
+<div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <div class="header">
+                <h1>Capture <span class="em-text">Life</span></h1>
+                <div class="pee">
+                  <p>A fun and easy way to blog, upload photos and archive posts.</p>
+                </div>  
+              </div>
+          </div>
+            <!-- 
+            <a href="#"><img class="app-btn" src="img/icon_app_store.png"></a>
+            <a href="#"><img class="app-btn" src="img/icon_google_play.png"></a> 
+            -->
+        </div><!-- row --> 
+      </div><!-- container -->
+</div><!-- umboron -->
+
+    <section id="middle">
+      <div class="container">
+        <div class="row">
+        <% @posts.each do |post| %> 
         
-        <div class="panel-body">
-            <%= post.body %><br/><br/>
-            <%= post.category.name %>
-        </div>
+         <div class="col-md-4">
+             <%= image_tag(post.photo, class: "demo") %> 
+            <!-- <%= image_tag("demo3.jpg", {class: "demo"}) %> -->
+            <h2><%= post.title %></h2>
+            <p><%= post.body %></p>
+            <a href="#" class="btn btn-default">Read More</a>
+         </div>
+         <%end%> 
+       
+        </div><!-- row --> 
+      </div> <!-- container-->
+    </section>    
         
-        <div class="panel-footer">
-            <%= post.status %> 
-            <%= post.created_at %> 
-        </div>
+        <section id="feature">
+          <div class="container">
             
-    </div>
-<% end %> 
+            <div class="row">
+              <div class="col-md-5">
+                <h1>Blog features</h1>
+                <ul> 
+                  <li><i class="glyphicon glyphicon-ok"></i> Cutomize your posts</li>
+                  <li><i class="glyphicon glyphicon-ok"></i> Archiving posts</li>
+                  <li><i class="glyphicon glyphicon-ok"></i> Storing uploaded pictures</li>
+                  <li><i class="glyphicon glyphicon-ok"></i> Sharing content</li>
+                </ul>
+              </div>
+              
+              <div class="col-md-4 col-md-offset-1">
+                <%= image_tag("logo.png", {class: "big-logo"}) %> 
+              </div>
+              
+            </div><!-- row -->
+          </div><!-- container -->
+        </section>
+        
+       
+  
+        

@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   end 
   
   #get '/homepage',  to: "homepage#index", as: :homepage
+  get '/index',      to: "pages#index", as: :index
   get '/:page',      to: "pages#show"
-  root               to: "pages#marketing"
+  root               to: "pages#index"
+  
   #root "pages#index"
   
 end
